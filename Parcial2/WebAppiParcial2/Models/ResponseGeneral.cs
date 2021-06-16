@@ -16,7 +16,7 @@ namespace WebAppiParcial2.Models
         }
 
         public bool Respuesta { get; set; }
-        public int id { get; set; }
+        public string id { get; set; }
 
         public string Detalle { get; set; }
 

@@ -15,7 +15,7 @@ namespace Logica
         public static Respuesta RespuestaInstance { get { return respuesta; } }
 
         public bool Resultado { get; set; }
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Detalle { get; set; }
     }
 }
