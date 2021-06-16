@@ -1,0 +1,6 @@
+namespace WebAppiParcial2.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}
