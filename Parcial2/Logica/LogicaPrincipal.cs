@@ -118,7 +118,7 @@ namespace Logica
                     Respuesta.RespuestaInstance.Resultado = false;
                     Respuesta.RespuestaInstance.Detalle = "Numero Estado invalido";
                     return Respuesta.RespuestaInstance;
-                    break;
+                    
             }
         }
 
