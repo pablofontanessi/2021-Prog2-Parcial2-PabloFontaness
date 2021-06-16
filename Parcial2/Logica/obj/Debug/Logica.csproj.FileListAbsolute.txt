@@ -1,0 +1,6 @@
+C:\Users\pablo\OneDrive\Documents\Prog 2 2021\2021-Prog2-Parcial2-PabloFontaness\Parcial2\Logica\bin\Debug\Logica.dll
+C:\Users\pablo\OneDrive\Documents\Prog 2 2021\2021-Prog2-Parcial2-PabloFontaness\Parcial2\Logica\bin\Debug\Logica.pdb
+C:\Users\pablo\OneDrive\Documents\Prog 2 2021\2021-Prog2-Parcial2-PabloFontaness\Parcial2\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\pablo\OneDrive\Documents\Prog 2 2021\2021-Prog2-Parcial2-PabloFontaness\Parcial2\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\pablo\OneDrive\Documents\Prog 2 2021\2021-Prog2-Parcial2-PabloFontaness\Parcial2\Logica\obj\Debug\Logica.dll
+C:\Users\pablo\OneDrive\Documents\Prog 2 2021\2021-Prog2-Parcial2-PabloFontaness\Parcial2\Logica\obj\Debug\Logica.pdb
