@@ -18,7 +18,7 @@ namespace Logica
         public string DescripcionPaquete { get; set; }
         public string NumeroEnvio { get; set; }
         public Personas Destinatario { get; set; }
-        public Personas Repartidor { get; set; }
+        public Repartidor Repartidor { get; set; }
         public int Estado { get; set; }
         public DateTime FechaEstimoEntrega { get; set; }
         public DateTime FechaEntrega { get; set; }

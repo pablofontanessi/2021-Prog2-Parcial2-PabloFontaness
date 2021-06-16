@@ -8,7 +8,8 @@ namespace Logica
 {
     public class Repartidor : Personas
     {
-        public float PorcentajeComision { get; set; }
+        public int PorcentajeComision { get; set; }
         public int CantidadEnvios { get; set; }
+        public int Total { get; set; }
     }
 }

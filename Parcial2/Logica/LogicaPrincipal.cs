@@ -96,7 +96,18 @@ namespace Logica
                         ListadoEnvios.Find(x => x.NumeroEnvio == numeroEnvio).FechaEntrega = DateTime.Today;
                         int DNI = ListadoEnvios.Find(x => x.NumeroEnvio == numeroEnvio).Repartidor.Dni;
                         ListadoRepartidores.Find(x => x.Dni == DNI).CantidadEnvios += 1;
-
+                        if (ListadoRepartidores.Find(x => x.Dni == DNI).Total != 0)
+                        {
+                            int total = ListadoRepartidores.Find(x => x.Dni == DNI).Total * ListadoRepartidores.Find(x => x.Dni == DNI).PorcentajeComision;
+                            ListadoRepartidores.Find(x => x.Dni == DNI).Total = total;
+                        }
+                        else
+                        {
+                            
+                            int total =  10 * ListadoRepartidores.Find(x => x.Dni == DNI).PorcentajeComision;
+                            ListadoRepartidores.Find(x => x.Dni == DNI).Total = total;
+                        }
+                        
                         Respuesta.RespuestaInstance.Resultado = true;
                         return Respuesta.RespuestaInstance;
                     }
@@ -111,9 +122,17 @@ namespace Logica
             }
         }
 
-        public Lista<Repartidor> ObtenerListadoRepartidorPorFechA(DateTime fechaDesde, DateTime fechaHasta)
+        public List<Repartidor> ObtenerListadoRepartidorPorFechA(DateTime fechaDesde, DateTime fechaHasta)
         {
-            
+            List<Repartidor> ListaFiltrada = ListadoRepartidores;
+            foreach (var envio in ListadoEnvios)
+            {
+                if (envio.FechaEstimoEntrega > fechaDesde && envio.FechaEstimoEntrega < fechaHasta && envio.Estado == 4)
+                {
+                    ListaFiltrada.Add(envio.Repartidor);
+                }
+            }
+            return ListaFiltrada;
         }
 
         public Repartidor ObtenerRepartidorPorDNI(string id)
