@@ -46,34 +46,7 @@ namespace WebAppiParcial2.Controllers
             }
         }
 
-        public IHttpActionResult Post(string NumeroEnvio)
-        {
-            ResponseGeneral responseGeneral = new ResponseGeneral(LogicaPrincipal.Instancia.ObtenerRepartidor(NumeroEnvio));
-
-            if (responseGeneral.Respuesta)
-            {
-                RepartidorRequest repartidorRequest = new RepartidorRequest(LogicaPrincipal.Instancia.ObtenerRepartidorPorDNI(responseGeneral.id));
-                return  Content(HttpStatusCode.OK, repartidorRequest);
-            }
-            
-            return Content(HttpStatusCode.BadRequest, responseGeneral.Detalle);
-
-        }
-
-        public IHttpActionResult Get([FromBody] DateTime FechaDesde, DateTime FechaHasta)
-        {
-            List<Repartidor> listaRepartidorFitrada = LogicaPrincipal.Instancia.ObtenerListadoRepartidorPorFechA(FechaDesde, FechaHasta);
-            List<RepartidoresReporte> listado =  RepartidoresReporte.Conversor(listaRepartidorFitrada);
-            if (listado != null)
-            {
-                return Content(HttpStatusCode.OK, listado);
-            }
-            else
-            {
-                return Content(HttpStatusCode.BadRequest, "No se encontro repartidor para esas fechas");
-            }
-        }
-
+     
            
     }
 }

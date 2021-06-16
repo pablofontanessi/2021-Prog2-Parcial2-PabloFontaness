@@ -158,6 +158,7 @@ namespace Logica
                         DNIRepartidor = repartidor.Dni;
                     }
                 }
+                ListadoEnvios.Find(x => x.NumeroEnvio == numeroEnvio).Repartidor = ObtenerRepartidorPorDNI(DNIRepartidor.ToString()); //asigne el repartidor al envio
                 Respuesta.RespuestaInstance.Resultado = true;
                 Respuesta.RespuestaInstance.Id = DNIRepartidor.ToString();
                 return Respuesta.RespuestaInstance;
